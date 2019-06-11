@@ -1,3 +1,6 @@
+#centos 7.6
+#nginx php73 w/ fpm mariadb10
+
 sudo yum update
 sudo yum -y install epel-release
 
@@ -10,7 +13,6 @@ systemctl enable nginx
 #install mariadb 10
 
 sudo yum install nano
-
 nano /etc/yum.repos.d/MariaDB.repo
 
 add
@@ -30,15 +32,10 @@ mysql_secure_installation
 
 enter
 Set root password ? Y
-
 Remove anon users ? Y
-
 Disallow root login remotely? Y
-
 Remove test databases ? Y
-
 Reload tables ? Y
-
 
 #Install PHP 7.3 with FPM
 
