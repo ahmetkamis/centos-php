@@ -26,7 +26,7 @@ baseurl = http://yum.mariadb.org/10.1/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 
-yum install mariadb-server mariadb
+yum install MariaDB-Server MariaDB
 
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
