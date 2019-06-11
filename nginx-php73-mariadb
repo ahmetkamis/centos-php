@@ -50,7 +50,7 @@ yum-config-manager --enable remi-php73
 yum install php
 yum install php-fpm php-xml php-soap php-xmlrpc php-mbstring php-json php-gd php-mcrypt php-mysql php-opcache
 #more extensions if you need
-yum install php-intl phpw-tidy
+yum install php-intl php-tidy
 yum install php-pecl-redis 
 yum install php-pecl-mongodb
 yum install php-devel php-pear
