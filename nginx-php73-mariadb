@@ -10,6 +10,9 @@ yum install nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
+#nginx server should be up
+http://serverip/
+
 #install mariadb 10
 
 yum install nano
