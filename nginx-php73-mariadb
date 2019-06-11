@@ -1,18 +1,18 @@
 #centos 7.6
 #nginx php73 w/ fpm mariadb10
 
-sudo yum update
-sudo yum -y install epel-release
+yum update
+yum install epel-release
 
 #install nginx
 
-sudo yum install nginx
-systemctl start nginx
-systemctl enable nginx
+yum install nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
 
 #install mariadb 10
 
-sudo yum install nano
+yum install nano
 nano /etc/yum.repos.d/MariaDB.repo
 
 add
@@ -23,10 +23,10 @@ baseurl = http://yum.mariadb.org/10.1/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 
-sudo yum install mariadb-server mariadb
+yum install mariadb-server mariadb
 
-systemctl start mariadb
-systemctl enable mariadb
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
 
 mysql_secure_installation
 
@@ -42,10 +42,10 @@ Reload tables ? Y
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 rpm -Uvh http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
-sudo yum install yum-utils
+yum install yum-utils
 yum-config-manager --enable remi-php73
-sudo yum install php
-sudo yum install php-fpm php-xml php-soap php-xmlrpc php-mbstring php-json php-gd php-mcrypt php-mysql php-opcache
+yum install php
+yum install php-fpm php-xml php-soap php-xmlrpc php-mbstring php-json php-gd php-mcrypt php-mysql php-opcache
 #more extensions if you need
 yum install php-intl phpw-tidy
 yum install php-pecl-redis 
