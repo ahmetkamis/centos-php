@@ -94,8 +94,8 @@ echo "<?php phpinfo(); ?>" > /usr/share/nginx/html/phpinfo.php
 http://serverip/phpinfo.php
 
 
-#additional config. session permission denied error.
+#additional config. fix permission denied error for php sessions.
 sudo chown -R nginx:nginx /var/lib/php
 
-#selinux enable http/nginx/php can connect to remote server/mysql
+#aditional config. selinux enable http/nginx/php can connect to remote server/mysql
 setsebool -P httpd_can_network_connect 1
