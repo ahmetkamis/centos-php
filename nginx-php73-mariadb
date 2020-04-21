@@ -92,3 +92,7 @@ echo "<?php phpinfo(); ?>" > /usr/share/nginx/html/phpinfo.php
 
 #test it
 http://serverip/phpinfo.php
+
+
+#additional config. session permission denied error.
+sudo chown -R nginx:nginx /var/lib/php
