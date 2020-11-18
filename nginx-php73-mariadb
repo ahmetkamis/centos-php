@@ -98,7 +98,8 @@ http://serverip/phpinfo.php
 sudo chown -R nginx:nginx /var/lib/php
 
 #aditional config. selinux enable http/nginx/php can connect to remote server/mysql -Mysql Connection refused-
-setsebool -P httpd_can_network_connect 1
+sudo setsebool -P httpd_can_network_connect 1
+sudo setsebool -P httpd_can_network_connect_db 1
 
 #http/nginx/php can write to files. -Permission Error-
 sudo chcon -R -t httpd_sys_rw_content_t /usr/share/nginx/html
